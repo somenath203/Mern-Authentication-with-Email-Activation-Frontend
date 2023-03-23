@@ -18,20 +18,16 @@ const VerifyEmail = () => {
 
         try {
 
-            const { data } = await axios.post(`${process.env.BACKEND_API_URL}/auth/verify-email`, { tokenFromFrontend: params.token });
+            const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_API_URL}/auth/verify-email`, { tokenFromFrontend: params.token });
 
-            // in dynamic route, /auth/verify/:token, therefore, we wrote params.token in order to access 
-            // the token from the route
 
             toast.success(data?.message);
 
             setShowMsgConditionally('Verification Successful... Redirecting you to Login Page');
 
-            // automatically navigate to dashboard page after user successfully verified his/her account
-            // with a delay of 3-4 seconds
             setTimeout(() => {
                 navigate('/');
-            },3200);
+            },3500);
             
         } catch (error) {
             
@@ -41,7 +37,7 @@ const VerifyEmail = () => {
 
             setTimeout(() => {
                 navigate('/register');
-            },3200);
+            },3500);
 
         }
 
