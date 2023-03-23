@@ -30,7 +30,7 @@ const Register = () => {
 
         setIsSendingDataToBackend(true);
 
-        const { data } = await axios.post(`${process.env.BACKEND_API_URL}/auth/register`, userDetails);
+        const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_API_URL}/auth/register`, userDetails);
 
         setIsSendingDataToBackend(false);
 

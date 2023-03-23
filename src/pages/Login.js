@@ -26,7 +26,7 @@ const Login = () => {
 
       setIsSendingDataToBackend(true);
 
-      const { data } = await axios.post(`${process.env.BACKEND_API_URL}/auth/login`, { email: email, password: password });
+      const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_API_URL}/auth/login`, { email: email, password: password });
 
       setIsSendingDataToBackend(false);
 

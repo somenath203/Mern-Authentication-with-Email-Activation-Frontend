@@ -25,7 +25,7 @@ const Dashboard = () => {
 
       const userToken = JSON.parse(localStorage.getItem('data'));
 
-      const { data } = await axios.post(`${process.env.BACKEND_API_URL}/auth/user-profile`, {}, {
+      const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_API_URL}/auth/user-profile`, {}, {
         headers: {
 
           Authorization: `Bearer ${userToken}`
@@ -64,7 +64,7 @@ const Dashboard = () => {
 
         setIsSendingDataToBackend(true);
 
-        const { data } = await axios.post(`${process.env.BACKEND_API_URL}/auth/change-password`, { currentPassword: formData.userAlreadyPassword, newPassword: formData.userNewPassword }, {
+        const { data } = await axios.post(`${process.env.REACT_APP_BACKEND_API_URL}/auth/change-password`, { currentPassword: formData.userAlreadyPassword, newPassword: formData.userNewPassword }, {
 
           headers: {
 
