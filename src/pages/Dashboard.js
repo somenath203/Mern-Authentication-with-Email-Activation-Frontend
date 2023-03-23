@@ -123,9 +123,9 @@ const Dashboard = () => {
 
         <br />
 
-        <h2 className="mt-5">Full Name: {userFullName}</h2>
+        <h3 className="mt-5 text-center">Full Name: {userFullName}</h3>
 
-        <h2 className="mt-4">Email: {userEmailAddress}</h2>
+        <h3 className="mt-4 text-center">Email: {userEmailAddress}</h3>
 
       </div>
 
